@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import JobBoard from './components/Greenhouse/JobBoard';
+import JobApplication from './components/Greenhouse/JobApplication';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <h3>K.</h3>
+       <h3>Associates</h3>
+  
+      <JobBoard/>
+      <JobApplication/>
     </div>
   );
 }
