@@ -42,8 +42,8 @@ const Introduction = () => {
         </div>
 
         <div className={styles.headerGrid}>
-          <h3 className={styles.subtitle}>Kinship</h3>
-          <h3>Associates</h3>
+          <h3 className={styles.subtitle}></h3>
+          <h3></h3>
         </div>
       </header>
 
