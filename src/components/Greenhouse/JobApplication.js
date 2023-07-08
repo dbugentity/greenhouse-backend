@@ -40,10 +40,10 @@ const JobApplicationForm = () => {
     event.preventDefault();
     // Here you should implement the request to your server.
     // You may need to transform `formValues` into the required format, and consider how to handle the file inputs.
-    //   axios.get('/proxyServerURL', formValues).
-    //   .then(response => ...)
-    //   .catch(error => ...)
-    axios.get('/proxyServerURL')
+      axios.get('/https://boards-api.greenhouse.io/v1/boards/99ff0ce83b8c462a7fb838cf5d5817b7-1/jobs/')
+      .then(response => response)
+      .catch(error => error)
+    axios.get('')
     .then(response => {
       // Handle the response
     })

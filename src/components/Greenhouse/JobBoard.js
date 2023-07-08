@@ -1,4 +1,5 @@
 // @ts-nocheck
+<<<<<<< Updated upstream
 /**
  * first draft page to integrate the job boards api key. 
  * what it does/different endpoints/knowledge stack:
@@ -13,10 +14,14 @@
  */
 
 import React, { useEffect, useState } from 'react';
+=======
+>>>>>>> Stashed changes
 import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 
-const JobBoard = () => {
+function JobBoard() {
   const [jobs, setJobs] = useState([]);
+<<<<<<< Updated upstream
   const [currentLocation, setCurrentLocation] = useState('currentCities');
   const greenhouseAPI = "https://boards-api.greenhouse.io/v1/boards/99ff0ce83b8c462a7fb838cf5d5817b7-1/api/jobs";
   const noJobMessage = "Don't see an opening that matches your background? Join our talent community here!";
@@ -78,10 +83,51 @@ const JobBoard = () => {
       ) : (
         <div className="no-job">
           <h4>{noJobMessage}</h4>
+=======
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      setLoading(true);
+      try {
+      const response = await axios.get('https://boards-api.greenhouse.io/v1/boards/23b3f46ab6eaf9b50e18c1b452e947d6-1/jobs');
+        setJobs(response.data.jobs);
+        setLoading(false);
+      } catch (err) {
+        setError('Error fetching data from Greenhouse API');
+        setLoading(false);
+      }
+    };
+
+    fetchJobs();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  return (
+    <div>
+      {jobs.length > 0 ? jobs.map(job => (
+        <div key={job.id}>
+          <a href={job.absolute_url}>{job.title}</a>
+>>>>>>> Stashed changes
         </div>
+      )) : (
+        <h4>There are currently no open vacancies. If you'd like to be considered for the future, please email your resume to kinship.co!</h4>
       )}
     </div>
   );
-};
+}
 
 export default JobBoard;
+
+<script
+  type="text/javascript"
+  src="https://boards-api.greenhouse.io/v1/example/method/url?callback=">
+</script>
