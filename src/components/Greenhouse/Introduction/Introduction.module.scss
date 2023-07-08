@@ -1,40 +1,99 @@
+body {
+  height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  justify-content: left;
+  // align-items: center;
+  background: #F0F0EB;
+  // overflow: hidden;
+  font-family: 'Plantin Head MT Std-serif', serif !important;
+  padding-left: 20px;
+
+}
+
+
 .header {
   display: grid;
-  grid-template-columns: 120px auto;
-  background-color: #000000; 
+  grid-template-columns: 150px auto 0px;
+  height: 10vh;
 }
 
 .logoWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: #1A1A1A;
 }
 
 .logo {
   color: #E5E5E5;
-  height: 20px;
-  font-size: 70px;
+  font-size: 90px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
 }
 
 .headerGrid {
-  display: grid;
-  grid-template-columns: 7fr 1fr;
-  align-items: center;
-  background: linear-gradient(180deg, black 50%, #A5FFAE 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, #1A1A1A 50%, #A5FFAE 50%);
+  font-family: 'United Sans', sans-serif;
+}
+
+.subtitle {
+  margin-top: 0;
 }
 
 h3 {
   font-size: 30px;
-  font-family: 'United Sans', sans-serif;
+  margin-bottom: 80px;
 }
 
-.headerGrid h3 {
-  font-size: 30px;
-  font-family: 'United Sans', sans-serif;
+.brandHeadline {
+  color: #190A05;
+  font-size: 100px;
+  line-height: 171px;
 }
 
+.subtitle {
+  color: #807672; 
+  font-size: 20x;
+  line-height: 24px;
+  // padding-left: 20px;
+  margin-inline: 25px 40px 90px;
+}
 
+.scrollWithParent {
+  color: #190A05;
+  font-size: 60px;
+  letter-spacing: 0;
+  margin-bottom: 1em;
+  margin-inline: 25px 40px 90px;
 
+}
 
+.bodyCopyTwo {
+  color: #190A05;
+  font-size: 20px;
+  font-family: 'FK Grotesk Neue', sans-serif !important;
+  letter-spacing: 0.5%;
+  line-height: 24px;
+  font-weight: 450;
+  margin-inline: 0px 20px 90px;
+  color: #190A05;
+  font-size: 20px;
+  margin-bottom: 2em;
+  width: 640px;
+  margin-inline: 25px 40px 90px;
+}
 
+.vector {
+  margin-top: 3rem;
+  width: 97%;
+}
+
+.vectorTwo {
+  margin-bottom: 2rem;
+  width: 97%;
+}

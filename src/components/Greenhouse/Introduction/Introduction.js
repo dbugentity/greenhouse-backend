@@ -1,6 +1,8 @@
 // @ts-nocheck
 import React, { useState } from 'react';
 import styles from './Introduction.module.scss'; // try to work consistently with scss
+import kinshipPageIcons from '../../../assets/png/kinshipPageIcons.png';
+import vector from '../../../assets/png/vector.png';
 
 const Introduction = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('All Departments');
@@ -43,17 +45,27 @@ const Introduction = () => {
 
         <div className={styles.headerGrid}>
           <h3 className={styles.subtitle}></h3>
-          <h3></h3>
+          <div class="horizontalLine"></div>
+          {/* <img src={vector} alt="My Image"  /> */}
         </div>
       </header>
+          <img src={vector} alt="My Image" className={styles.vector} />
 
-      <h2>Kinship</h2>
-      <h4>Welcome!</h4>
-      <p>We’re the recruiting home of the Kinship division of Mars Petcare. </p>
-      <p>We also recruit for at-home diagnostics brands Wisdom and Whistle (part of the Science & Diagnostics division).</p>
-      <p>Both Kinship and Science & Diagnostics are divisions of Mars Petcare—and are dedicated to one purpose: creating A BETTER WORLD FOR PETS™.</p>
-      <p>Through comprehensive veterinary care, nutrition, breakthrough programs in diagnostics, wearable health monitoring, DNA testing and pet welfare, our 100,000 Petcare Associates help pets in more than 130 countries. </p>
-      <p>Interested? Learn more about our open roles below.</p>
+      <h1 className={styles.brandHeadline}>Kinship.</h1>
+      <img src={vector} alt="My Image" className={styles.vectorTwo}  />
+
+      <h2 className={styles.subtitle}>Welcome!</h2>
+      <p className={styles.scrollWithParent}>We’re the recruiting home of the Kinship division of Mars Petcare</p>
+
+   
+      <h2 className={styles.bodyCopy}>We also recruit for at-home diagnostics brands Wisdom and Whistle (part of the Science & Diagnostics division).</h2>
+      <div >
+        <h3 className={styles.bodyCopyTwo}>
+        Both Kinship and Science & Diagnostics are divisions of Mars Petcare—and are dedicated to one purpose: creating A BETTER WORLD FOR PETS™. Through comprehensive veterinary care, nutrition, breakthrough programs in diagnostics, wearable health monitoring, DNA testing and pet welfare, our 100,000 Petcare Associates help pets in more than 130 countries. 
+        </h3>
+      </div>
+      
+      <p  className={styles.bodyCopy}>Interested? Learn more about our open roles below.</p>
 
       <h4>OUR FAMILY OF BRANDS</h4>
       <p>The Kin, The Wildest, PetExec, VetInsight, Adopt a Pet<br />Part of Mars Petcare’s Kinship Division</p>
@@ -93,5 +105,6 @@ const Introduction = () => {
     </div>
   );
 };
+
 
 export default Introduction;
