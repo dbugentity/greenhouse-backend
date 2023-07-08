@@ -37,14 +37,14 @@ const JobBoard = () => {
     );
   };
 
-  useEffect(() => {
-    axios.get(`https://api.greenhouse.io/v1/kinship/${process.env.GREENHOUSE_API_KEY}/jobs`).then
-    (response => {
-      setJobs(response);
-    }).catch(err => {
-      console.log(err);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get(`https://api.greenhouse.io/v1/kinship/${process.env.GREENHOUSE_API_KEY}/jobs`).then
+  //   (response => {
+  //     setJobs(response);
+  //   }).catch(err => {
+  //     console.log(err);
+  //   });
+  // }, []);
 
   const filterJobsByLocation = (location) => {
     setCurrentLocation(location);

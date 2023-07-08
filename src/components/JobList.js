@@ -11,14 +11,18 @@ function JobList() {
     const fetchJobs = async () => {
       setLoading(true);
       try {
+        // const response = await axios.get('https://boards-api.greenhouse.io/v1/boards/{board_token}', {
+        //   headers: {
+        //     Accept: 'application/json, text/plain, */*', 'Content-Type': null, board_token: 'whistlelabs',
+        //   }
+        // });
         const response = await axios.get('https://cors-anywhere.herokuapp.com/https://boards-api.greenhouse.io/v1/boards/{board_token}/jobs?content=true', {
-          headers: {
-            'Content-Type': 'application/json',
-            'board_token': '23b3f46ab6eaf9b50e18c1b452e947d6-1'
-          }
-        });
-        if (response.data && response.data.jobs) {
-          setJobs(response.data.jobs);
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
+        if (response && response) {
+          setJobs(response);
         } else {
           throw new Error('Invalid response data');
         }
