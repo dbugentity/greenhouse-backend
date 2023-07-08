@@ -1,10 +1,11 @@
 // @ts-nocheck
 import React, { useState } from 'react';
+import styles from './Introduction.module.scss'; // try to work consistently with scss
 
 const Introduction = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('All Departments');
   const [selectedOffice, setSelectedOffice] = useState('All Offices');
-  const [jobs, setJobs] = useState([]); // This should be your initial jobs array
+  const [jobs, setJobs] = useState([]); // This should be initial jobs array
 
   const departments = ['All Departments', 'Kinship', 'Platform - Brand & Marketing', 'Platform - Technology'];
   const offices = ['All Offices', 'New York', 'San Francisco', 'Portland', 'London'];
@@ -20,7 +21,7 @@ const Introduction = () => {
   };
 
   const filterJobs = (department, office) => {
-    let filteredJobs = jobs; // Replace this with your initial jobs array
+    let filteredJobs = jobs;
 
     if (department !== 'All Departments') {
       filteredJobs = filteredJobs.filter(job => job.department === department);
@@ -35,6 +36,17 @@ const Introduction = () => {
 
   return (
     <div>
+        <header className={styles.header}>
+        <div className={styles.logoWrapper}>
+          <h1 className={styles.logo}>R1</h1>
+        </div>
+
+        <div className={styles.headerGrid}>
+          <h3 className={styles.subtitle}>Kinship</h3>
+          <h3>Associates</h3>
+        </div>
+      </header>
+
       <h2>Kinship</h2>
       <h4>Welcome!</h4>
       <p>We’re the recruiting home of the Kinship division of Mars Petcare. </p>
@@ -70,7 +82,7 @@ const Introduction = () => {
           </select>
         </div>
       </div>
-      
+
       <ul>
         {jobs.map(job => (
           <li key={job.id}>
