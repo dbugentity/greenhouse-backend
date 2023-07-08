@@ -14,8 +14,8 @@ function App() {
       <section>
         <Introduction />
         <JobBoard />
-        <JobApplication />
-        <JobList/>
+        {/* <JobApplication /> */}
+        {/* <JobList/> */}
       </section>
 
     </div>

@@ -91,9 +91,47 @@ color: #190A05;
   line-height: 10px;
 }
 
+.bodyCopyFour {
+  margin-top: 1rem;
+  font-size: 38px;
+
+}
+
 .vector {
   // display: inline-block;
   // vertical-align: middle;
   // line-height: 130%;
   margin-top: 3rem;
+}
+
+.dropdown-container {
+  display: flex;
+  // align-items: center;
+  margin-bottom: 1rem;
+  // align-items: start;
+  gap: 50px;
+}
+
+.dropdown {
+  width: 200px;
+  margin-bottom: 3rem;
+  min-height: 2rem;
+  margin-top: 1rem;
+}
+
+.side-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-column p {
+  margin: 0;
+  padding: 10px;
+  background:  #e0e0db;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.side-column p:hover {
+  background-color: #e0e0db;
 }

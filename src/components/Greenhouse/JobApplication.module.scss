@@ -1,0 +1,43 @@
+.job-application-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #F0F0EB;
+    font-family: 'Plantin Head MT Std-serif', serif !important;
+  }
+  
+  .job-application-form label {
+    margin-bottom: 10px;
+  }
+  
+  .job-application-form input,
+  .job-application-form select {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .job-application-form input[type="file"] {
+    padding: 0;
+  }
+  
+  .job-application-form input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .job-application-form input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #190A05;
+    color: #F0F0EB;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .job-application-form input[type="submit"]:hover {
+    background-color: #190A05;
+  }
+  

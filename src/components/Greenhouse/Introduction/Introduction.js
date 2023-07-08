@@ -78,33 +78,44 @@ const Introduction = () => {
 
       <img src={vector} alt="My Image" className={styles.vectorTwo}  />
 
-      <h4>OUR FAMILY OF BRANDS</h4>
-      <p>The Kin, The Wildest, PetExec, VetInsight, Adopt a Pet<br />Part of Mars Petcare’s Kinship Division</p>
-      <p>Whistle Labs and Wisdom Panel<br />Part of Mars Petcare’s Science & Diagnostics Division</p>
+      <h4 className={styles.bodyCopyFour}>Our Family Of Brands</h4>
+      <div className={styles['side-column']}>
+  <p className={styles.bodyCopyTwo}>
+    The Kin, The Wildest, PetExec, VetInsight, Adopt a Pet<br />
+    Part of Mars Petcare’s Kinship Division
+  </p>
+  <p className={styles.bodyCopyTwo}>
+    Whistle Labs and Wisdom Panel<br />
+    Part of Mars Petcare’s Science & Diagnostics Division
+  </p>
+</div>
 
-      <div id="job-board-filter">
-        <div>
-          <label>Department: </label>
-          <select value={selectedDepartment} onChange={handleDepartmentChange}>
-            {departments.map((department, index) => (
-              <option key={index} value={department}>
-                {department}
-              </option>
-            ))}
-          </select>
-        </div>
+     
 
-        <div>
-          <label>Office: </label>
-          <select value={selectedOffice} onChange={handleOfficeChange}>
-            {offices.map((office, index) => (
-              <option key={index} value={office}>
-                {office}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
+      <div id="job-board-filter" className={styles['dropdown-container']}>
+  <div>
+    <label>Department: </label>
+    <select value={selectedDepartment} onChange={handleDepartmentChange} className={styles['dropdown']}>
+      {departments.map((department, index) => (
+        <option key={index} value={department}>
+          {department}
+        </option>
+      ))}
+    </select>
+  </div>
+
+  <div>
+    <label>All Offices: </label>
+    <select value={selectedOffice} onChange={handleOfficeChange} className={styles['dropdown']}>
+      {offices.map((office, index) => (
+        <option key={index} value={office}>
+          {office}
+        </option>
+      ))}
+    </select>
+  </div>
+</div>
+
 
       <ul>
         {jobs.map(job => (
