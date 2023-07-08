@@ -41,24 +41,33 @@ const Introduction = () => {
         <header className={styles.header}>
         <div className={styles.logoWrapper}>
           <h1 className={styles.logo}>R1</h1>
+    
         </div>
 
         <div className={styles.headerGrid}>
           <h3 className={styles.subtitle}></h3>
-          <div class="horizontalLine"></div>
-          {/* <img src={vector} alt="My Image"  /> */}
         </div>
+        
       </header>
+      {/* <img src={kinshipPageIcons} alt="Kinship Page Icons" className={styles.kinshipPageIcons} /> */}
+
+          {/* <img src={vector} alt="My Image" className={styles.vector} /> */}
+          {/* <img src={kinshipPageIcons} alt="Kinship Page Icons" className={styles.kinshipPageIcons} /> */}
+
           <img src={vector} alt="My Image" className={styles.vector} />
+      <p className={styles.scrollWithParent}>We’re The Recruiting Home Of The Kinship Division Of Mars Petcare.</p>
+     
+      <h1 className={styles.brandHeadline}>
+        
+        <div className={styles.kinshipPageIcons}>
+        A whole new world.
+        </div>
+        </h1>
 
-      <h1 className={styles.brandHeadline}>Kinship.</h1>
-      <img src={vector} alt="My Image" className={styles.vectorTwo}  />
-
-      <h2 className={styles.subtitle}>Welcome!</h2>
-      <p className={styles.scrollWithParent}>We’re the recruiting home of the Kinship division of Mars Petcare</p>
-
-   
-      <h2 className={styles.bodyCopy}>We also recruit for at-home diagnostics brands Wisdom and Whistle (part of the Science & Diagnostics division).</h2>
+          <img src={vector} alt="My Image" className={styles.vector} />
+      
+      <h2 className={styles.bodyCopy}>We also recruit for at-home diagnostics brands Wisdom and Whistle.</h2>
+      <h2 className={styles.bodyCopyThree}>(part of the Science & Diagnostics division)</h2>
       <div >
         <h3 className={styles.bodyCopyTwo}>
         Both Kinship and Science & Diagnostics are divisions of Mars Petcare—and are dedicated to one purpose: creating A BETTER WORLD FOR PETS™. Through comprehensive veterinary care, nutrition, breakthrough programs in diagnostics, wearable health monitoring, DNA testing and pet welfare, our 100,000 Petcare Associates help pets in more than 130 countries. 
@@ -66,6 +75,8 @@ const Introduction = () => {
       </div>
       
       <p  className={styles.bodyCopy}>Interested? Learn more about our open roles below.</p>
+
+      <img src={vector} alt="My Image" className={styles.vectorTwo}  />
 
       <h4>OUR FAMILY OF BRANDS</h4>
       <p>The Kin, The Wildest, PetExec, VetInsight, Adopt a Pet<br />Part of Mars Petcare’s Kinship Division</p>

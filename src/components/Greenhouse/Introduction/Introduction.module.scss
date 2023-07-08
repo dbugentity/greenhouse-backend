@@ -7,10 +7,8 @@ body {
   background: #F0F0EB;
   // overflow: hidden;
   font-family: 'Plantin Head MT Std-serif', serif !important;
-  padding-left: 20px;
-
+  padding-left: 30px;
 }
-
 
 .header {
   display: grid;
@@ -20,8 +18,6 @@ body {
 
 .logoWrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #1A1A1A;
 }
 
@@ -30,70 +26,76 @@ body {
   font-size: 90px;
   font-weight: bold;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .headerGrid {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
   background: linear-gradient(to bottom, #1A1A1A 50%, #A5FFAE 50%);
   font-family: 'United Sans', sans-serif;
 }
 
 .subtitle {
-  margin-top: 0;
+  margin-bottom: 20px auto;
 }
 
 h3 {
   font-size: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 24px;
 }
 
 .brandHeadline {
   color: #190A05;
   font-size: 100px;
-  line-height: 171px;
+  margin-top: 2rem auto;
 }
 
 .subtitle {
-  color: #807672; 
-  font-size: 20x;
+  color: #190A05; 
+  font-size: 24x;
   line-height: 24px;
-  // padding-left: 20px;
-  margin-inline: 25px 40px 90px;
 }
 
 .scrollWithParent {
   color: #190A05;
-  font-size: 60px;
-  letter-spacing: 0;
-  margin-bottom: 1em;
-  margin-inline: 25px 40px 90px;
+  font-size: 24px;
+  margin-bottom: 50px;
+  line-height: 24px;
+  line-height: 130%;
+  font-weight: 600;
+  // margin-inline: 25px 40px 90px;
+}
 
+.bodyCopy {
+  font-size: 20px;
+  line-height: 10%;
+  margin-top: 2rem;
 }
 
 .bodyCopyTwo {
   color: #190A05;
   font-size: 20px;
+  letter-spacing: 0.9%;
+color: #190A05;
+  width: 650px;
+  margin-top: 2rem;
   font-family: 'FK Grotesk Neue', sans-serif !important;
-  letter-spacing: 0.5%;
-  line-height: 24px;
-  font-weight: 450;
-  margin-inline: 0px 20px 90px;
-  color: #190A05;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.bodyCopyThree {
+  color: #807672;
   font-size: 20px;
-  margin-bottom: 2em;
-  width: 640px;
-  margin-inline: 25px 40px 90px;
+  margin-inline: 0px 20px 90px;
+  line-height: 10px;
 }
 
 .vector {
+  // display: inline-block;
+  // vertical-align: middle;
+  // line-height: 130%;
   margin-top: 3rem;
-  width: 97%;
-}
-
-.vectorTwo {
-  margin-bottom: 2rem;
-  width: 97%;
 }
