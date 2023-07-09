@@ -11,16 +11,19 @@ function JobList() {
     const fetchJobs = async () => {
       setLoading(true);
       try {
-        // const response = await axios.get('https://boards-api.greenhouse.io/v1/boards/{board_token}', {
-        //   headers: {
-        //     Accept: 'application/json, text/plain, */*', 'Content-Type': null, board_token: 'whistlelabs',
-        //   }
-        // });
-        const response = await axios.get('https://cors-anywhere.herokuapp.com/https://boards-api.greenhouse.io/v1/boards/{board_token}/jobs?content=true', {
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
+        const response = await axios.get('https://boards-api.greenhouse.io/v1/boards/{board_token}', {
+          headers: {
+            Accept: 'application/json, text/plain, */*', 'Content-Type': null, board_token: 'whistlelabs',
+          }
+        });
+
+        
+
+//         const response = await axios.get('https://api.greenhouse.io/v1/kinship/jobs', {
+//           headers: {
+//             Accept: 'application/json, text/plain, */*', 'Content-Type': null, board_token: 'whistlelabs',
+//           }
+// });
         if (response && response) {
           setJobs(response);
         } else {
@@ -57,10 +60,25 @@ function JobList() {
           </div>
         ))
       ) : (
-        <h4>There are currently no job details available.</h4>
+        <h4>{jobs}</h4>
       )}
+         {/* {jobs.length > 0 ? (
+          console.log(jobs),
+            <ul>
+              {jobs.map((jobs, index) => (
+                <li key={index}>{jobs}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{jobs.length}
+            </p>
+            
+          )} */}
+          
     </div>
+  
   );
+  
 }
 
 export default JobList;
