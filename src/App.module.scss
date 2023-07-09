@@ -49,10 +49,10 @@ ul {
   padding: 6px 0;
 
   li {
-    // animation: rotate 4s infinite;
-    // transform-style: preserve-3d;
-    // position: relative;
-    // padding: 6px 0;
+    animation: rotate 4s infinite;
+    transform-style: preserve-3d;
+    position: relative;
+    padding: 6px 0;
 
     a {
       position: relative;
@@ -87,11 +87,6 @@ ul {
         // padding-bottom: 7rem;
         // padding-top: 3rem;
         transition: 0.5s;
-      }
-
-      &:hover::after {
-        // transform: scaleY(1);
-        // transform-origin: left;
       }
     }
   }

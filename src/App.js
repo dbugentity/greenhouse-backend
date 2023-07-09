@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
-import JobBoard from "./components/Greenhouse/JobBoard";
-import JobApplication from './components/Greenhouse/JobApplication';
-import Introduction from './components/Greenhouse/Introduction/Introduction';
-
-import styles from './App.module.scss';
+// @ts-nocheck
+import React, { useState, useEffect } from "react";
+import "./App.scss";
+import bg from './assets/png/bg.png';
+import Introduction from "./components/Greenhouse/Introduction/Introduction";
 
 function App() {
   const [offsetY, setOffsetY] = useState(0);
@@ -12,47 +10,19 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <section className="app">
+    <section>
+      <Introduction  style={{ transform: `translateY(${offsetY * 0.2}px)`}}></Introduction>
+      <div
       
-   
-    
-      {/* <Introduction /> */}
-        
-      
-
-      {/* <img src={vector} alt="My Image" className={styles.vector} /> */}
-      {/* <p className={styles.scrollWithParent}>We’re The Recruiting Home Of The Kinship Division Of Mars Petcare.</p> */}
-      {/* <h1 className={styles.brandHeadline}>
-        <div className={styles.kinshipPageIcons}>
-
-        </div>
-      </h1> */}
-
-      {/* <img src={vector} alt="My Image" className={styles.vector} /> */}
-
-   {/* <Introduction /> */}
-        
-      {/* <img  style={{ transform: `translateY(${offsetY* 0.7}px)` }} alt="" }></img> */}
-    
-
-    
-      <Introduction />
-      {/* <JobApplication /> */}
-      <div 
-      // className={styles.ul}
-      style={{ transform: `translateY(${offsetY* 0.2}px)`, background: " #1A1A1A" }}>
-
-
-    
+      >
+           <img  style={{ transform: `translateY(${offsetY * 0.2}px)`}} src={bg} alt=""></img>
       </div>
-      
-        {/* <img  style={{ transform: `translateY(-${offsetY * -0.7}px)` }} src={bg} alt="" /> */}
 
-   
     </section>
   );
 }
