@@ -1,17 +1,13 @@
-// @ts-nocheck
-
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import JobBoard from "./components/Greenhouse/JobBoard";
 import JobApplication from './components/Greenhouse/JobApplication';
 import Introduction from './components/Greenhouse/Introduction/Introduction';
-import JobList from './components/JobList';
+
 import styles from './App.module.scss';
-import bg from './assets/png/bg.png';
 
 function App() {
   const [offsetY, setOffsetY] = useState(0);
-  const [offsetX, setOffsetX] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
   useEffect(() => {
@@ -22,7 +18,7 @@ function App() {
   return (
     <section className="app">
       
-        <img  style={{ transform: `translateY(-${offsetY * 0.5}px)` }} src={bg} alt="" />
+   
     
       {/* <Introduction /> */}
         

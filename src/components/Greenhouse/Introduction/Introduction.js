@@ -1,15 +1,13 @@
 // @ts-nocheck
-import React, { Children, useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { animated, useSpring } from '@react-spring/web';
 import styles from './Introduction.module.scss'; 
-import bg from '../../../assets/png/bg.png';
 import vector from '../../../assets/png/vector.png';
 import {motion, useAnimation, useInView, useScroll, useTransform} from 'framer-motion';
 
-
-const Introduction = ({children, width = "fit-content"}) => {
-  let {scrollYProgress} = useAnimation(['0%', '100%']);
+const Introduction =() => {
+  // let  = useAnimation(['0%', '100%']);
   let y = useTransform( [0, 5], ["0%", "100%"]);
 
   const ref = useRef(null);
@@ -65,9 +63,9 @@ animate={mainControls}
 transition={{duration: 0.5, delay: 0.25} }
 >
 </motion.div>
-{/* <section className='w-escape relative -mt-[76px] flex flex-col pt -[76px]'>
+<section className='w-escape relative -mt-[76px] flex flex-col pt -[76px]'>
 
-</section> */}
+</section>
 
   <div>
       <header className={styles.header}>
@@ -99,14 +97,11 @@ transition={{duration: 0.5, delay: 0.25} }
 
 <p className={styles.bodyCopy}>Interested? Learn more about our open roles below.</p>
 
-<img src={bg} alt="My Image" className={styles.vectorTwo} />
-
 <h4 className={styles.bodyCopyFour}>Our Family Of Brands</h4>
 <h5 className={styles.copy} style={{padding: "0"}}>Discover the wonders and surprises that await you as you hover overthem!</h5>
 
 <ul className={styles.ul}>
 <li><a href="#">The Kin</a>
-<img src={bg} alt="" className={styles.ulImg} style={{display: "none"}}/>
 </li>
 <li><a href="#">The Wildest</a></li>
 <li><a href="#">PetExec</a></li>
@@ -138,15 +133,10 @@ transition={{duration: 0.5, delay: 0.25} }
             ))}
           </select>
         </div>
-      </div>
 
-      <ul>
-        {jobs.map(job => (
-          <li key={job.id}>
-            {job.title} - {job.department} - {job.office}
-          </li>
-        ))}
-      </ul>
+        <a href="https://boards.greenhouse.io/whistlelabs">Open Positions:</a>
+      </div>
+   
     </div>
   );
 };

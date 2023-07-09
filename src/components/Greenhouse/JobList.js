@@ -1,7 +1,6 @@
 // @ts-nocheck
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import styles from '../JobList.module.scss';
 
 function JobList() {
   const [jobs, setJobs] = useState([]);
@@ -12,30 +11,29 @@ function JobList() {
     const fetchJobs = async () => {
       setLoading(true);
       try {
-        const response = await axios.get('https://boards-api.greenhouse.io/v1/boards/kinship}', {
-          headers: {
-            Accept: 'application/json, text/plain, */*', 'Content-Type': null, board_token: 'whistlelabs',
-          }
-        });
-        // const response = await axios.get('https://kinship.co/job-search/kinship', {
+        // const response = await axios.get('https://boards-api.greenhouse.io/v1/boards/{board_token}', {
         //   headers: {
-        //     'Content-Type': 'application/json',
-        //     'board_token': 'kinship',
+        //     Accept: 'application/json, text/plain, */*', 'Content-Type': null, board_token: 'whistlelabs',
         //   }
         // });
+        const response = await axios.get('https://cors-anywhere.herokuapp.com/https://boards-api.greenhouse.io/v1/boards/{board_token}/jobs?content=true', {
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
         if (response && response) {
-          setJobs(response.data);
-          console.log('response:', response);
+          setJobs(response);
         } else {
           throw new Error('Invalid response data');
         }
         setLoading(false);
       } catch (err) {
         console.error(err);
-        setError(`${err.message}`);
+        setError(`Error fetching data from Greenhouse API: ${err.message}`);
         setLoading(false);
       }
     };
+
     fetchJobs();
   }, []);
 
@@ -44,12 +42,7 @@ function JobList() {
   }
 
   if (error) {
-    return (
-      <div>
-        <h4>Error occurred while fetching jobs data from Greenhouse API due to:</h4>
-        <p>{error}</p>
-      </div>
-    );
+    return <div>{error}</div>;
   }
 
   return (

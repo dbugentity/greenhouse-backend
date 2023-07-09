@@ -16,9 +16,7 @@ import axios from 'axios';
 const JobBoard = () => {
   const [jobs, setJobs] = useState([]);
   const [currentLocation, setCurrentLocation] = useState('currentCities');
-  const greenhouseAPI = `https://boards-api.greenhouse.io/v1/boards/${process.env.REACT_APP_GREENHOUSE_API_KEY}/jobs`;
-
-  const jobOpeningsMessage = "Current Job Openings";
+  
   let currentCities = {
     "NY": 1,
     "SF": 2,
@@ -37,14 +35,14 @@ const JobBoard = () => {
     );
   };
 
-  // useEffect(() => {
-  //   axios.get(`https://api.greenhouse.io/v1/kinship/${process.env.GREENHOUSE_API_KEY}/jobs`).then
-  //   (response => {
-  //     setJobs(response);
-  //   }).catch(err => {
-  //     console.log(err);
-  //   });
-  // }, []);
+  useEffect(() => {
+    axios.get(`https://api.greenhouse.io/v1/kinship/${process.env.GREENHOUSE_API_KEY}/jobs`).then
+    (response => {
+      setJobs(response);
+    }).catch(err => {
+      console.log(err);
+    });
+  }, []);
 
   const filterJobsByLocation = (location) => {
     setCurrentLocation(location);
@@ -70,7 +68,7 @@ const JobBoard = () => {
           ))
       ) : (
         <div className="no-job">
-          <h4>{jobOpeningsMessage}</h4>
+          
         </div>
       )}
     </div>
