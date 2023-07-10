@@ -108,6 +108,8 @@ const JobBoard = () => {
     setSelectedJob(jobId);
   };
 
+  
+
   return (
     <div>
       <h1 style={{ marginBottom: '0px' }}>Current Job Openings</h1>

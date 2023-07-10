@@ -24,17 +24,14 @@ function App() {
         </div>
       </header>
       
+      <Introduction style={{marginTop: "2%", transform: `translateY(${offsetY * 0.2}px)`}}></Introduction>
+     
+      <img style={{ transform: `translateY(${offsetY * 0.4}px)`}}src={bg} alt="" ></img>
 
-      <Introduction style={{marginTop: "2%", transform: `translateY(${offsetY * 0.3}px)`}}></Introduction>
-      <JobList/>
-      {/* <img style={{ transform: `translateX(${offsetY * 0.2}px)`}}src={bg} alt="" ></img> */}
-
-      <div style={{marginTop: "2%", transform: `translateY(${offsetY * 0.3}px)`}}>
-        <JobApplication/>
-       
+      <div style={{marginTop: "2%", transform: `translateY(${offsetY * 0.1}px)`}}>
+        {/* <JobApplication/> */}
+        <JobList/>
       </div>
-      
-    
       
     </section>
   );
