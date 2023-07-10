@@ -1,3 +1,22 @@
 body {
   background: #F0F0EB;
 }
+
+.dropdown-container {
+  display: flex;
+  margin-bottom: 1rem;
+  // align-items: start;
+  gap: 50px;
+  transform: scaleY(1);
+  transform: scaleX(1);
+}
+
+.dropdown {
+  width: 200px;
+  margin-bottom: 3rem;
+  min-height: 2rem;
+  margin-top: 2rem;
+
+  // transform: scaleY(1);
+
+}

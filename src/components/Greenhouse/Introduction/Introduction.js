@@ -5,6 +5,7 @@ import { animated, useSpring } from '@react-spring/web';
 import styles from './Introduction.module.scss'; 
 import kinshipPageIcons from '../../../assets/png/kinshipPageIcons.png';
 import vector from '../../../assets/png/vector.png';
+import JobList from '../JobList';
 
 const Introduction = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('All departments');
@@ -88,6 +89,8 @@ const Introduction = () => {
   const jobs = getFilteredJobs();
 
   return (
+
+    
     
 <ParallaxProvider>
 <animated.div>
@@ -143,9 +146,9 @@ const Introduction = () => {
 <img src={vector} alt="My Image" className={styles.vectorTwo} />
     </div>
     <div>
-      <h1 style={{ marginBottom: '0px' }}>Current Job Openings</h1>
+      {/* <h1 style={{ marginBottom: '0px' }}>Current Job Openings</h1> */}
 
-      <div id="job-board-filter" className={styles['dropdown-container']}>
+      {/* <div id="job-board-filter" className={styles['dropdown-container']}>
         <div>
           <label>Department: </label>
           <select value={selectedDepartment} onChange={handleDepartmentChange} className={styles['dropdown']}>
@@ -167,18 +170,10 @@ const Introduction = () => {
             ))}
           </select>
         </div>
-      </div>
+      </div> */}
 
-<h2>Job Openings:</h2>
-          {jobs.length > 0 ? (
-            <ul>
-              {jobs.map((jobs, index) => (
-                <li key={index}>{jobs}</li>
-              ))}
-            </ul>
-          ) : (
-            <p>{jobs.length}</p>
-          )}
+      {/* <JobList/> */}
+
     </div>
 
 </animated.div>

@@ -23,16 +23,18 @@ function App() {
         <div className="site-header-mask">
         </div>
       </header>
+      
 
       <Introduction style={{marginTop: "2%", transform: `translateY(${offsetY * 0.3}px)`}}></Introduction>
+      <JobList/>
+      {/* <img style={{ transform: `translateX(${offsetY * 0.2}px)`}}src={bg} alt="" ></img> */}
 
       <div style={{marginTop: "2%", transform: `translateY(${offsetY * 0.3}px)`}}>
         <JobApplication/>
+       
       </div>
       
-
-      <JobBoard style={{ transform: `translateY(${offsetY * 1.1}px)`}}/>
-        <JobList/>
+    
       
     </section>
   );
