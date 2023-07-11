@@ -3,6 +3,20 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styles from '../JobList.module.scss';
 
+const JobCard = ({ job, handleJobChange }) => (
+  <div className={styles.jobCard}>
+    <h3>{job.title}</h3>
+    {job.metadata && job.metadata.department && (
+      <p>Department: {job.metadata.department}</p>
+    )}
+    {job.metadata && job.metadata.office && (
+      <p>Office: {job.metadata.office}</p>
+    )}
+    {/* Add more job information here */}
+    <button onClick={() => handleJobChange(job.id)}>Apply Now</button>
+  </div>
+);
+
 const JobList = ({ selectedDepartment, selectedOffice, selectedJob, handleJobChange }) => {
   const [jobs, setJobs] = useState([]);
 
@@ -36,27 +50,13 @@ const JobList = ({ selectedDepartment, selectedOffice, selectedJob, handleJobCha
   });
 
   return (
-    <div>
+    <div className={styles.jobList}>
       {filteredJobs.length === 0 ? (
         <p>No jobs found.</p>
       ) : (
-        <ul>
-          {filteredJobs.map((job) => (
-            <li key={job.id}>
-              <h3>{job.title}</h3>
-              {job.metadata && job.metadata.department && (
-                <p>Department: {job.metadata.department}</p>
-              )}
-              {job.metadata && job.metadata.office && (
-                <p>Office: {job.metadata.office}</p>
-              )}
-              {/* {job.content && (
-                <div dangerouslySetInnerHTML={{ __html: job.content }} />
-              )} */}
-              <button onClick={() => handleJobChange(job.id)}>Apply Now</button>
-            </li>
-          ))}
-        </ul>
+        filteredJobs.map((job) => (
+          <JobCard key={job.id} job={job} handleJobChange={handleJobChange} />
+        ))
       )}
     </div>
   );
@@ -107,8 +107,6 @@ const JobBoard = () => {
   const handleJobChange = (jobId) => {
     setSelectedJob(jobId);
   };
-
-  
 
   return (
     <div>

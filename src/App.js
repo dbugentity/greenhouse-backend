@@ -26,7 +26,7 @@ function App() {
       
       <Introduction style={{marginTop: "2%", transform: `translateY(${offsetY * 0.2}px)`}}></Introduction>
      
-      <img style={{ transform: `translateY(${offsetY * 0.4}px)`}}src={bg} alt="" ></img>
+      {/* <img style={{ transform: `translateY(${offsetY * 0.4}px)`}}src={bg} alt="" ></img> */}
 
       <div style={{marginTop: "2%", transform: `translateY(${offsetY * 0.1}px)`}}>
         {/* <JobApplication/> */}
